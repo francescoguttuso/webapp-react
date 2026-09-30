@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export const GameCard = (props) => {
   return (
@@ -13,6 +13,7 @@ export const GameCard = (props) => {
       <p>Genere: {props.genre}</p>
       <p>Console: {props.console}</p>
       <p>Anno: {props.releaseYear}</p>
+      <Link to={`/details/${props.id}`}>Dettagli</Link>
     </div>
   );
 };
