@@ -36,6 +36,7 @@ export const Home = () => {
       {games.map((game) => (
         <GameCard
           key={game.id}
+          id={game.id}
           title={game.title}
           genre={game.genre}
           console={game.console}
