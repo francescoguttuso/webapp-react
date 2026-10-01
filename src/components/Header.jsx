@@ -3,10 +3,14 @@ import "./Header.css";
 
 export const Header = () => {
   return (
-    <header>
-      <nav>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/games"}>Games </Link>
+    <header className="site-header">
+      <nav className="header-nav">
+        <div className="logo">Universo Videogiochi</div>
+
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/games">Games</Link>
+        </div>
       </nav>
     </header>
   );

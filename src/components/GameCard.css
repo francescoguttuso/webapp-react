@@ -1,10 +1,10 @@
 .game-card {
   width: 280px;
-  background: #11121f;
-  border: 1px solid #302a45;
+  background: linear-gradient(145deg, #25243a, #1d1d30);
+  border: 1px solid #4a3b6b;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -12,7 +12,9 @@
 
 .game-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(80, 50, 255, 0.25);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(124, 58, 237, 0.18);
 }
 
 /* COPERTINA */
