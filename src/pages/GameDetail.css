@@ -68,6 +68,11 @@
 }
 
 /* RECENSIONI */
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .reviews-section {
   clear: both;

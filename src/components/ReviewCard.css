@@ -27,12 +27,26 @@
 }
 
 .review-rating {
-  color: #a78bfa;
-  font-size: 0.9rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.review-rating span {
-  color: #c7c3d2;
-  margin-right: 6px;
+.review-stars {
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+}
+
+.stars-full {
+  color: #ffd43b;
+}
+
+.stars-empty {
+  color: #ffffff;
+}
+
+.rating-number {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
 }

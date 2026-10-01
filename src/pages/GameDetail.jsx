@@ -34,7 +34,25 @@ export const GameDetail = () => {
             <p>{game.description}</p>
 
             <div className="reviews-section">
-              <h2>Recensioni della community</h2>
+              <div className="reviews-header">
+                <h2>Recensioni della community</h2>
+
+                <div className="average-rating">
+                  <span className="average-number">
+                    Media voto: {Math.floor(game.average_rating)}
+                  </span>
+
+                  <div className="average-stars">
+                    <span className="stars-full">
+                      {"★".repeat(Math.floor(game.average_rating))}
+                    </span>
+
+                    <span className="stars-empty">
+                      {"☆".repeat(10 - Math.floor(game.average_rating))}
+                    </span>
+                  </div>
+                </div>
+              </div>
 
               <div className="reviews-list">
                 {game.reviews.map((review) => (
