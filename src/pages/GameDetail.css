@@ -1,0 +1,119 @@
+.game-detail {
+  min-height: calc(100vh - 75px);
+  padding: 55px 40px 80px;
+  background:
+    radial-gradient(
+      circle at 70% 0%,
+      rgba(124, 58, 237, 0.12),
+      transparent 35%
+    ),
+    #171827;
+  color: #ffffff;
+}
+
+.game-detail-card {
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 35px 40px;
+
+  background: linear-gradient(145deg, #25243a, #1d1d30);
+
+  border: 1px solid #40365f;
+  border-radius: 18px;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* PARTE SUPERIORE */
+
+.game-detail-card > img {
+  width: 220px;
+  height: 310px;
+  object-fit: cover;
+  display: block;
+
+  float: left;
+  margin: 0 35px 25px 0;
+
+  border-radius: 10px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.game-detail-info {
+  min-height: 310px;
+}
+
+.game-detail-info h1 {
+  margin-bottom: 22px;
+
+  color: #ffffff;
+  font-size: 2.4rem;
+}
+
+.game-detail-info > p {
+  margin-bottom: 10px;
+
+  color: #d4d0dd;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.game-detail-info > p:nth-of-type(1),
+.game-detail-info > p:nth-of-type(2),
+.game-detail-info > p:nth-of-type(3) {
+  color: #a78bfa;
+  font-weight: 700;
+}
+
+/* RECENSIONI */
+
+.reviews-section {
+  clear: both;
+
+  padding-top: 35px;
+  margin-top: 25px;
+
+  border-top: 1px solid #40365f;
+}
+
+.reviews-section h2 {
+  margin-bottom: 22px;
+
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .game-detail {
+    padding: 30px 20px 60px;
+  }
+
+  .game-detail-card {
+    padding: 25px;
+  }
+
+  .game-detail-card > img {
+    float: none;
+    width: 220px;
+    height: auto;
+    margin: 0 auto 25px;
+  }
+
+  .game-detail-info {
+    min-height: auto;
+  }
+
+  .game-detail-info h1 {
+    font-size: 2rem;
+  }
+}
