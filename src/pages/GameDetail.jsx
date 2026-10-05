@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ReviewCard } from "../components/ReviewCard";
+import { ReviewForm } from "../components/ReviewForm";
 import axios from "axios";
 import "./GameDetail.css";
 
@@ -62,6 +63,7 @@ export const GameDetail = () => {
                     rating={review.rating}
                   />
                 ))}
+                <ReviewForm gameId={game.id} />
               </div>
             </div>
           </div>
