@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./ReviewForm.css";
 
 export const ReviewForm = (props) => {
   const [text, setText] = useState("");
@@ -20,7 +21,7 @@ export const ReviewForm = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="review-form" onSubmit={handleSubmit}>
       <textarea
         value={text}
         onChange={(e) => {

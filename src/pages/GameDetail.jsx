@@ -20,12 +20,6 @@ export const GameDetail = () => {
     getGame();
   }, [id]);
 
-  useEffect(() => {
-    axios.get(`${apiGames}/${id}`).then((res) => {
-      setGame(res.data);
-    });
-  }, [id]);
-
   return (
     <div className="game-detail">
       {game === null ? (
