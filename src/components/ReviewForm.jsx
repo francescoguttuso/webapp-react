@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import "./ReviewForm.css";
 
 export const ReviewForm = (props) => {
@@ -8,9 +9,14 @@ export const ReviewForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(text);
-    console.log(rating);
-    console.log(props.gameId);
+    axios
+      .post(`http://localhost:3000/games/${props.gameId}/reviews`, {
+        text,
+        rating: Number(rating),
+      })
+      .then((res) => {
+        console.log(res.data);
+      });
   };
 
   return (
