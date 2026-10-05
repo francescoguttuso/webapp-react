@@ -10,6 +10,16 @@ export const GameDetail = () => {
   const { id } = useParams();
   const [game, setGame] = useState(null);
 
+  const getGame = () => {
+    axios.get(`${apiGames}/${id}`).then((res) => {
+      setGame(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getGame();
+  }, [id]);
+
   useEffect(() => {
     axios.get(`${apiGames}/${id}`).then((res) => {
       setGame(res.data);
@@ -63,7 +73,7 @@ export const GameDetail = () => {
                     rating={review.rating}
                   />
                 ))}
-                <ReviewForm gameId={game.id} />
+                <ReviewForm gameId={game.id} getGame={getGame} />
               </div>
             </div>
           </div>

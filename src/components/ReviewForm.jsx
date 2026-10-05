@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import "./ReviewForm.css";
 
 export const ReviewForm = (props) => {
   const [text, setText] = useState("");
@@ -16,6 +15,7 @@ export const ReviewForm = (props) => {
       })
       .then((res) => {
         console.log(res.data);
+        props.getGame();
       });
   };
 
