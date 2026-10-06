@@ -16,6 +16,10 @@ export const ReviewForm = (props) => {
       })
       .then((res) => {
         console.log(res.data);
+
+        setText("");
+        setRating(0);
+
         props.getGame();
       });
   };
